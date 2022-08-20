@@ -47,9 +47,11 @@ bot.on('message', async (msg) => {
     if (typeOfFind === 'author') {
       const author = text;
       let array = null;
+      let stop = 0;
       books.map(async (book) => {
-        if (book.author.toLowerCase().includes(author.toLowerCase())) {
+        if (book.author.toLowerCase().includes(author.toLowerCase()) && stop < 20) {
           array += book;
+          stop += 1;
           await bot.sendPhoto(chatId, book.img, {
             reply_markup: {
               keyboard: [['Name of Book', 'Author']],
@@ -68,9 +70,11 @@ bot.on('message', async (msg) => {
     } else if (typeOfFind === 'book') {
       const name = text;
       let array = null;
+      let stop = 0;
       books.map(async (book) => {
-        if (book.title.toLowerCase().includes(name.toLowerCase())) {
+        if (book.title.toLowerCase().includes(name.toLowerCase()) && stop < 20) {
           array += book;
+          stop += 1;
           await bot.sendPhoto(chatId, book.img, {
             reply_markup: {
               keyboard: [['Name of Book', 'Author']],
