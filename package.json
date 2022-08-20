@@ -1,0 +1,23 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "telegram bot for book search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RostislavNaumenko/telegram-bot.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs"
+  ],
+  "author": "Naumenko Rostislav, Shurko Stanislav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RostislavNaumenko/telegram-bot/issues"
+  },
+  "homepage": "https://github.com/RostislavNaumenko/telegram-bot#readme"
+}
