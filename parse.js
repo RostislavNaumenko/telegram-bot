@@ -3,12 +3,13 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
   const jsonFile = [];
-  const parse = async () => {
-    const getHTML = async (url) => {
-      const { data } = await axios.get(url);
-      return cheerio.load(data);
-    };
 
+const getHTML = async (url) => {
+  const { data } = await axios.get(url);
+  return cheerio.load(data);
+};
+
+  const parse = async () => {
     const PagesOfSite = await getHTML('https://www.yakaboo.ua/ua/knigi/hudozhestvennaja-literatura/ukrainskaja-literatura.html?p=1');
     const pageNumber = PagesOfSite('a.last').text();
     for (let i = 1; i <= pageNumber; i += 1) {

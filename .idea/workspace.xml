@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b70c2658-a675-420f-a86b-792dd6579d65" name="Changes" comment="unresolved files">
+    <list default="true" id="b70c2658-a675-420f-a86b-792dd6579d65" name="Changes" comment="Works without images!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/books.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/eslint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/js-yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/json5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/loose-envify" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/node-which" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/resolve" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/rimraf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-config-airbnb-base/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-config-airbnb-base/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-plugin-jsx-a11y/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-plugin-jsx-a11y/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-plugin-react/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-plugin-react/node_modules/.bin/resolve" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-plugin-react/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-plugin-react/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/parse.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +61,7 @@
       <updated>1660991481494</updated>
       <workItem from="1660991486385" duration="272000" />
       <workItem from="1660991834869" duration="14598000" />
-      <workItem from="1661012373562" duration="5573000" />
+      <workItem from="1661012373562" duration="9319000" />
     </task>
     <task id="LOCAL-00001" summary="package-lock">
       <created>1660993796584</created>
@@ -114,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661012431154</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Works without images!">
+      <created>1661018687997</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661018687997</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +128,7 @@
     <MESSAGE value="Bot is working without data" />
     <MESSAGE value="Bot is working without data (log is out)" />
     <MESSAGE value="unresolved files" />
-    <option name="LAST_COMMIT_MESSAGE" value="unresolved files" />
+    <MESSAGE value="Works without images!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Works without images!" />
   </component>
 </project>

@@ -47,19 +47,23 @@ bot.on('message', async (msg) => {
     if (typeOfFind === 'author') {
       let author = text;
       let array = null;
-      books.map(async (book) => {
+      books.map( async (book) => {
         if (book.author.toLowerCase().includes(author.toLowerCase())) {
           array += book;
-          await bot.sendMessage(
-              chatId,  `Name: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}\nLink: ${book.link}`, {
-                reply_markup: {
-                  keyboard: [['Name of Book', 'Author']],
-                },
-              });
+          await bot.sendPhoto(chatId, book.img, {
+            reply_markup: {
+              keyboard: [['Name of Book', 'Author']],
+            },
+            caption: `Name: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}\nLink: ${book.link}`,
+          });
         }
       })
       if (array === null) {
-        await bot.sendMessage(chatId, 'Nothing is find')
+        await bot.sendMessage(chatId, 'Nothing is find', {
+          reply_markup: {
+            keyboard: [['Name of Book', 'Author']],
+          },
+        })
       }
     } else if (typeOfFind === 'book') {
       let name = text;
@@ -67,16 +71,20 @@ bot.on('message', async (msg) => {
       books.map(async (book) => {
         if (book.title.toLowerCase().includes(name.toLowerCase())) {
           array += book;
-          await bot.sendMessage(
-              chatId, `Name: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}\nLink: ${book.link}`, {
-                reply_markup: {
-                  keyboard: [['Name of Book', 'Author']],
-                },
-              });
+          await bot.sendPhoto(chatId, book.img, {
+            reply_markup: {
+              keyboard: [['Name of Book', 'Author']],
+            },
+            caption: `Name: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}\nLink: ${book.link}`,
+          });
         }
       })
       if (array === null) {
-        await bot.sendMessage(chatId, 'Nothing is find')
+        await bot.sendMessage(chatId, 'Nothing is find', {
+          reply_markup: {
+            keyboard: [['Name of Book', 'Author']],
+          },
+        })
       }
     }
   }
