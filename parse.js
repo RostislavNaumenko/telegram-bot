@@ -2,7 +2,6 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-const createJson = () => {
   const jsonFile = [];
   const parse = async () => {
     const getHTML = async (url) => {
@@ -11,18 +10,12 @@ const createJson = () => {
     };
 
     const PagesOfSite = await getHTML('https://www.yakaboo.ua/ua/knigi/hudozhestvennaja-literatura/ukrainskaja-literatura.html?p=1');
-    // eslint-disable-next-line no-unused-vars
     const pageNumber = PagesOfSite('a.last').text();
-    // console.log($.html());
-    // console.log(pageNumber);
-    for (let i = 1; i <= 1; i += 1) {
-    // eslint-disable-next-line no-await-in-loop
+    for (let i = 1; i <= pageNumber; i += 1) {
       const selector = await getHTML(
         `https://www.yakaboo.ua/ua/knigi/hudozhestvennaja-literatura/ukrainskaja-literatura.html?p=${i}`,
       );
-      // eslint-disable-next-line no-loop-func
       selector('.item__layout').each((j, element) => {
-      // eslint-disable-next-line no-undef
         const GetTitle = selector(element).find('a').attr('title');
         const GetAuthor = selector(element).find('div.product-author').text();
         const NewAuthor = GetAuthor.trim();
@@ -44,6 +37,5 @@ const createJson = () => {
     }
   };
   parse();
-};
-export default createJson;
+
 // https://buch-in-der-au.buchkatalog.de/webapp/wcs/stores/servlet/RecommendationProductView/56227/10002/-3/955400354/Neuheiten

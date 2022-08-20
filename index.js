@@ -1,4 +1,5 @@
 const TelegramApi = require('node-telegram-bot-api');
+const books = require('./books.json');
 
 const token = '5615401316:AAHqRBBfsvGje0EsDlLIPi3Bra9hTKFtwfU';
 
@@ -44,17 +45,41 @@ bot.on('message', async (msg) => {
 
   if (text !== 'Author' && text !== 'Name of Book' && text !== '/start') {
     if (typeOfFind === 'author') {
-      await bot.sendMessage(chatId, 'Author', {
-        reply_markup: {
-          keyboard: [['Name of Book', 'Author']],
-        },
-      });
+      let author = text;
+      let array = null;
+      books.map(async (book) => {
+        if (book.author.toLowerCase().includes(author.toLowerCase())) {
+          array += book;
+          await bot.sendMessage(
+              chatId,  `Name: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}\nLink: ${book.link}`, {
+                reply_markup: {
+                  keyboard: [['Name of Book', 'Author']],
+                },
+              });
+        }
+      })
+      if (array === null) {
+        await bot.sendMessage(chatId, 'Nothing is find')
+      }
     } else if (typeOfFind === 'book') {
-      await bot.sendMessage(chatId, 'Name of Book', {
-        reply_markup: {
-          keyboard: [['Name of Book', 'Author']],
-        },
-      });
+      let name = text;
+      let array = null;
+      books.map(async (book) => {
+        if (book.title.toLowerCase().includes(name.toLowerCase())) {
+          array += book;
+          await bot.sendMessage(
+              chatId, `Name: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}\nLink: ${book.link}`, {
+                reply_markup: {
+                  keyboard: [['Name of Book', 'Author']],
+                },
+              });
+        }
+      })
+      if (array === null) {
+        await bot.sendMessage(chatId, 'Nothing is find')
+      }
     }
   }
 });
+
+console.log()

@@ -24,6 +24,7 @@
     "dependencies": {
         "axios": "^0.27.2",
         "cheerio": "^1.0.0-rc.12",
+        "node-fetch": "^3.2.10",
         "node-telegram-bot-api": "^0.58.0",
         "nodemon": "^2.0.19"
     },
