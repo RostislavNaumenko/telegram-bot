@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b70c2658-a675-420f-a86b-792dd6579d65" name="Changes" comment="Works without images!">
+    <list default="true" id="b70c2658-a675-420f-a86b-792dd6579d65" name="Changes" comment="All works!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/parse.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="task-1/adding-bot-behavior" />
+        <entry key="$PROJECT_DIR$" value="Save" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +45,7 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -61,7 +59,8 @@
       <updated>1660991481494</updated>
       <workItem from="1660991486385" duration="272000" />
       <workItem from="1660991834869" duration="14598000" />
-      <workItem from="1661012373562" duration="9319000" />
+      <workItem from="1661012373562" duration="13252000" />
+      <workItem from="1661033583943" duration="94000" />
     </task>
     <task id="LOCAL-00001" summary="package-lock">
       <created>1660993796584</created>
@@ -105,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661018687997</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="All works!">
+      <created>1661026483212</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661026483212</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +135,7 @@
     <MESSAGE value="Bot is working without data (log is out)" />
     <MESSAGE value="unresolved files" />
     <MESSAGE value="Works without images!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Works without images!" />
+    <MESSAGE value="All works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="All works!" />
   </component>
 </project>
