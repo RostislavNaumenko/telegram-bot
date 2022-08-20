@@ -22,6 +22,8 @@
     },
     "homepage": "https://github.com/RostislavNaumenko/telegram-bot#readme",
     "dependencies": {
+        "axios": "^0.27.2",
+        "cheerio": "^1.0.0-rc.12",
         "node-telegram-bot-api": "^0.58.0",
         "nodemon": "^2.0.19"
     },
