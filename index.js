@@ -14,9 +14,11 @@ const keyRemove = {
 };
 
 let typeOfFind = '';
+let stop = 5;
 
 bot.setMyCommands([
   { command: '/start', description: 'Bot restart' },
+  { command: '/change', description: 'Bot will change the maximum number of books that will be sent to you.' },
 ]);
 
 // Bot listen type of find
@@ -27,6 +29,21 @@ bot.on('message', async (msg) => {
   if (text === '/start') {
     await bot.sendMessage(chatId, `Hello ${msg.from.first_name}, I was created to help you find books all over the Internet.`
           + ' I will select the best offers for you at the moment. Just choose by what criterion I should search for a book', {
+      reply_markup: {
+        keyboard: [['Name of Book', 'Author']],
+      },
+    });
+  }
+  if (text === '/change') {
+    await bot.sendMessage(chatId, 'Set a new limit please...', {
+      reply_markup: {
+        keyboard: [['5', '10'], ['20', '50'], ['100', '500']],
+      },
+    });
+  }
+  if (text === '5' || text === '10' || text === '20' || text === '50' || text === '100' || text === '500') {
+    stop = text;
+    await bot.sendMessage(chatId, `New limit is ${text}`, {
       reply_markup: {
         keyboard: [['Name of Book', 'Author']],
       },
@@ -43,15 +60,17 @@ bot.on('message', async (msg) => {
     typeOfFind = 'author';
   }
 
-  if (text !== 'Author' && text !== 'Name of Book' && text !== '/start') {
+  if (
+    text !== 'Author' && text !== 'Name of Book' && text !== '/start' && text !== '/change'
+    && text !== '5' && text !== '10' && text !== '20' && text !== '50' && text !== '100' && text !== '500'
+  ) {
     if (typeOfFind === 'author') {
       const author = text;
       let array = null;
-      let stop = 0;
       books.map(async (book) => {
-        if (book.author.toLowerCase().includes(author.toLowerCase()) && stop < 20) {
+        if (book.author.toLowerCase().includes(author.toLowerCase()) && stop > 0) {
           array += book;
-          stop += 1;
+          stop -= 1;
           await bot.sendPhoto(chatId, book.img, {
             reply_markup: {
               keyboard: [['Name of Book', 'Author']],
@@ -70,11 +89,10 @@ bot.on('message', async (msg) => {
     } else if (typeOfFind === 'book') {
       const name = text;
       let array = null;
-      let stop = 0;
       books.map(async (book) => {
-        if (book.title.toLowerCase().includes(name.toLowerCase()) && stop < 20) {
+        if (book.title.toLowerCase().includes(name.toLowerCase()) && stop > 0) {
           array += book;
-          stop += 1;
+          stop -= 1;
           await bot.sendPhoto(chatId, book.img, {
             reply_markup: {
               keyboard: [['Name of Book', 'Author']],
@@ -93,5 +111,3 @@ bot.on('message', async (msg) => {
     }
   }
 });
-
-console.log();
