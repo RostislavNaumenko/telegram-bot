@@ -45,9 +45,9 @@ bot.on('message', async (msg) => {
 
   if (text !== 'Author' && text !== 'Name of Book' && text !== '/start') {
     if (typeOfFind === 'author') {
-      let author = text;
+      const author = text;
       let array = null;
-      books.map( async (book) => {
+      books.map(async (book) => {
         if (book.author.toLowerCase().includes(author.toLowerCase())) {
           array += book;
           await bot.sendPhoto(chatId, book.img, {
@@ -57,16 +57,16 @@ bot.on('message', async (msg) => {
             caption: `Name: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}\nLink: ${book.link}`,
           });
         }
-      })
+      });
       if (array === null) {
         await bot.sendMessage(chatId, 'Nothing is find', {
           reply_markup: {
             keyboard: [['Name of Book', 'Author']],
           },
-        })
+        });
       }
     } else if (typeOfFind === 'book') {
-      let name = text;
+      const name = text;
       let array = null;
       books.map(async (book) => {
         if (book.title.toLowerCase().includes(name.toLowerCase())) {
@@ -78,16 +78,16 @@ bot.on('message', async (msg) => {
             caption: `Name: ${book.title}\nAuthor: ${book.author}\nPrice: ${book.price}\nLink: ${book.link}`,
           });
         }
-      })
+      });
       if (array === null) {
         await bot.sendMessage(chatId, 'Nothing is find', {
           reply_markup: {
             keyboard: [['Name of Book', 'Author']],
           },
-        })
+        });
       }
     }
   }
 });
 
-console.log()
+console.log();

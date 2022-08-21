@@ -37,13 +37,13 @@ const parse = async () => {
       jsonFile.push(book);
     });
   }
-  fs.writeFile('books.json', JSON.stringify(jsonFile), (err) => {
+  fs.writeFile('books1.json', JSON.stringify(jsonFile), (err) => {
     if (err) console.log('Error');
   });
 };
 
 const parse2 = async () => {
-  for (let i = 1; i <= 200; i += 1) {
+  for (let i = 1; i <= 34000; i += 1) {
     // eslint-disable-next-line no-await-in-loop
     const selector = await getHTML(
       `https://www.bookdepository.com/category/3391/Teen-Young-Adult?page=${i}`,
@@ -64,8 +64,9 @@ const parse2 = async () => {
       };
       jsonFile.push(book);
     });
+    console.log(i);
   }
-  fs.writeFile('books.json', JSON.stringify(jsonFile), (err) => {
+  fs.writeFile('books1.json', JSON.stringify(jsonFile), (err) => {
     if (err) console.log('Error');
   });
 };
